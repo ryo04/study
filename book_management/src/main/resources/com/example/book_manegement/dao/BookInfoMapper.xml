@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.book_management.dao.BookInfoMapper">
+
+    <!-- 全件検索 -->
+    <select id="findAll" resultType="com.example.book_management.bean.BookInfo">
+        SELECT * FROM bookinf WHERE deleted_date IS NULL
+    </select>
+
+    <!-- 条件指定検索 -->
+    <select id="search" resultType="com.example.book_management.bean.BookInfo">
+        SELECT
+            *
+        FROM
+            bookinf
+        WHERE
+            deleted_date IS NULL
+            AND (
+               bookName LIKE CONCAT('%', #{bookName}, '%')
+            OR holder LIKE CONCAT('%', #{holder}, '%')
+            OR category = #{category}
+            )
+    </select>
+
+    <!-- 新規書籍登録 -->
+    <insert id="save">
+        INSERT INTO bookinf
+            (bookName, holder, lending_flg, category, delete_flg, update_date)
+        VALUES
+            (#{bookName}, #{holder}, 0, #{category}, 0,  CURRENT_TIMESTAMP)
+    </insert>
+
+    <!-- 論理削除 -->
+    <update id="delete">
+        UPDATE bookinf 
+        SET deleted_date = CURRENT_TIMESTAMP
+    </update>
+</mapper>
