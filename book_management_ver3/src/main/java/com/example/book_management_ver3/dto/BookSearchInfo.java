@@ -14,7 +14,7 @@ import lombok.Data;
 public class BookSearchInfo {
 
 	/** 書籍ID */
-	private String bookId;
+	private String bookName;
 
 	/** 貸出状態種別 */
 	private BookStatusKind bookStatusKind;

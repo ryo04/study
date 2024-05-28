@@ -13,8 +13,8 @@ import lombok.Data;
 @Data
 public class BookListForm {
 
-	/** 書籍ID */
-	private String bookId;
+	/** 書籍名 */
+	private String bookName;
 
 	/** 貸出状態種別 */
 	private BookStatusKind bookStatusKind;

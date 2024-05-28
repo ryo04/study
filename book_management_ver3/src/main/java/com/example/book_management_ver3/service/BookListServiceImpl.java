@@ -69,13 +69,13 @@ public class BookListServiceImpl implements BookListService {
 	 * @return 検索結果
 	 */
 	private List<BookInfo> findBookInfoByParam(BookSearchInfo dto) {
-		var bookIdParam = AppUtil.addWildcard(dto.getBookId());
+		var bookIdParam = AppUtil.addWildcard(dto.getBookName());
 
 		if (dto.getBookStatusKind() != null) {
-			return repository.findByBookIdLikeAndBookStatusKind(bookIdParam,
+			return repository.findByBookNameLikeAndBookStatusKind(bookIdParam,
 					dto.getBookStatusKind());
 		} else {
-			return repository.findByBookIdLike(bookIdParam);
+			return repository.findByBookNameLike(bookIdParam);
 		}
 	}
 

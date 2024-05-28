@@ -18,10 +18,10 @@ public interface BookInfoRepository extends JpaRepository<BookInfo, String> {
 	/**
 	 * 書籍IDの部分一致検索を行います。
 	 * 
-	 * @param bookId 書籍ID
+	 * @param bookName 書籍名
 	 * @return 検索でヒットした書籍情報のリスト
 	 */
-	List<BookInfo> findByBookIdLike(String bookId);
+	List<BookInfo> findByBookNameLike(String bookName);
 
 	/**
 	 * 書籍ID、貸出状態の項目を使って検索を行います。
@@ -33,10 +33,10 @@ public interface BookInfoRepository extends JpaRepository<BookInfo, String> {
 	 * </lu>
 	 * <p>
 	 * 
-	 * @param bookId 書籍ID
+	 * @param bookName 書籍名
 	 * @param bookStatusKind 貸出状態
 	 * @return 検索でヒットした書籍情報のリスト
 	 */
-	List<BookInfo> findByBookIdLikeAndBookStatusKind(String bookId, BookStatusKind bookStatusKind);
+	List<BookInfo> findByBookNameLikeAndBookStatusKind(String bookName, BookStatusKind bookStatusKind);
 
 }
