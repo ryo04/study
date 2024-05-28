@@ -45,7 +45,7 @@ public class SignupServiceImpl implements SignupService {
 				return SignupResult.FAILURE_BY_ALREADY_COMPLETED;
 			}
 
-			return SignupResult.FAILURE_BY_SIGNUP_PROCEEDING;
+//			return SignupResult.FAILURE_BY_SIGNUP_PROCEEDING;
 		}
 
 		var signupInfo = editSignupInfo(dto);

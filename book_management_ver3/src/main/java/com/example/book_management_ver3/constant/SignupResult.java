@@ -18,9 +18,6 @@ public enum SignupResult {
 	/* 既に本登録済み */
 	FAILURE_BY_ALREADY_COMPLETED(MessageConst.SIGNUP_ALREADY_COMPLETED),
 
-	/* 仮登録状態 */
-	FAILURE_BY_SIGNUP_PROCEEDING(MessageConst.SIGNUP_SIGNUP_PROCEEDING),
-
 	/* DB更新エラー */
 	FAILURE_BY_DB_ERROR(MessageConst.SIGNUP_DB_ERROR);
 
