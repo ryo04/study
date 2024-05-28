@@ -16,9 +16,11 @@ public class BookListInfo {
 	/** 書籍ID */
 	private String bookId;
 	
-	/** 書籍一覧で必要な情報をここに追加する */
 	/** 書籍名 */
 	private String bookName;
+	
+	/** カテゴリー */
+	private String category;
 
 	/** 貸出状態 */
 	private String status;

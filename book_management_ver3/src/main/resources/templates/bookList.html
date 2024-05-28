@@ -51,6 +51,7 @@
 							<th scope="col"></th>
 							<th scope="col">書籍ID</th>
 							<th scope="col">書籍名</th>
+							<th scope="col">カテゴリー</th>
 							<th scope="col">貸出状態</th>
 							<th scope="col">登録日時</th>
 							<th scope="col">最終更新日時</th>
@@ -62,6 +63,7 @@
 							<th scope="row" th:text="${stat.count}"></th>
 							<td th:id="|bookId_${stat.count}|"><span th:text="${book.bookId}"></span></td>
 							<td th:id="|bookName_${stat.count}|"><span th:text="${book.bookName}"></span></td>
+							<td th:id="|category_${stat.count}|"><span th:text="${book.category}"></span></td>
 							<td th:id="|status_${stat.count}|"><span th:text="${book.status}"></span></td>
 							<td th:id="|createTime_${stat.count}|"><span th:text="${#temporals.format(book.createTime, 'yyyy-MM-dd HH:mm')}"></span></td>
 							<td th:id="|updateTime_${stat.count}|"><span th:text="${#temporals.format(book.updateTime, 'yyyy-MM-dd HH:mm')}"></span></td>

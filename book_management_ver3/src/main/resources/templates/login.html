@@ -11,11 +11,11 @@
 	<div th:insert="~{common/guideMessage :: guideMessage}"></div>
 	<form th:action="@{/login}" method="post" th:object="${loginForm}">
 		<div class="form-group">
-			<div class="col-3 col-md-2 col-xxl-1">
+			<div class="col-9 col-md-6 col-xxl-3">
 				<p><label for="loginId">ログインID：</label>
 				<input type="text" class="form-control" th:field="*{loginId}">
 			</div>
-			<div class="col-3 col-md-2 col-xxl-1">
+			<div class="col-9 col-md-6 col-xxl-3">
 				<p><label for="password">パスワード：</label>
 				<input type="password" class="form-control" th:field="*{password}">
 			</div>
