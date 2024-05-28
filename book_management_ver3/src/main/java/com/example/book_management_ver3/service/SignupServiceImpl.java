@@ -44,8 +44,6 @@ public class SignupServiceImpl implements SignupService {
 			if (userInfo.isSignupCompleted()) {
 				return SignupResult.FAILURE_BY_ALREADY_COMPLETED;
 			}
-
-//			return SignupResult.FAILURE_BY_SIGNUP_PROCEEDING;
 		}
 
 		var signupInfo = editSignupInfo(dto);
@@ -70,7 +68,7 @@ public class SignupServiceImpl implements SignupService {
 		userInfo.setPassword(passwordEncoder.encode(dto.getPassword()));
 		userInfo.setUserStatusKind(UserStatusKind.ENABLED);
 		userInfo.setAuthorityKind(AuthorityKind.ITEM_WATCHER);
-		userInfo.setSignupCompleted(false);
+		userInfo.setSignupCompleted(true); // 仮登録処理が必要になったら true から false に変える
 		userInfo.setCreateTime(LocalDateTime.now());
 		userInfo.setUpdateTime(LocalDateTime.now());
 		userInfo.setUpdateUser(dto.getLoginId());
