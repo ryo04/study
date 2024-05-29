@@ -15,6 +15,12 @@ public class UserListInfo {
 
 	/** ログインID */
 	private String loginId;
+	
+	/** 名前 */
+	private String name;
+	
+	/** フリガナ */
+	private String furigana;
 
 	/** ログイン失敗回数 */
 	private int loginFailureCount;
