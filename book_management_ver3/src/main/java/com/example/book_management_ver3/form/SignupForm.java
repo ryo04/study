@@ -21,4 +21,13 @@ public class SignupForm {
 	@Length(min = 8, max = 20)
 	private String password;
 	
+	/** 性別 */
+	private String sex;
+	
+	/** 名前 */
+	private String name;
+	
+	/** フリガナ */
+	private String furigana;
+	
 }

@@ -20,8 +20,8 @@ public interface SignupService {
 	 * <li>権限：常に「商品情報の確認が可能」のコード値が登録されます。</li>
 	 * </ul>
 	 * 
-	 * @param dto 仮登録用情報
-	 * @return 仮登録情報(ユーザー情報Entity)、既に同じユーザIDで登録がある場合はEmpty
+	 * @param dto 登録用情報
+	 * @return 登録情報(ユーザー情報Entity)、既に同じユーザIDで登録がある場合はEmpty
 	 */
 	public SignupResult signup(SignupInfo dto);
 }

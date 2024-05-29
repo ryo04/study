@@ -21,6 +21,21 @@
 				<input type="password" class="form-control" th:field="*{password}">
 				<span class="text-danger" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
 			</div>
+			<div class="col-9 col-md-6 col-xxl-3">
+				<p><label for="sex">性別：</label>
+				<input type="text" class="form-control" th:field="*{sex}">
+				<span class="text-danger" th:if="${#fields.hasErrors('sex')}" th:errors="*{sex}"></span>
+			</div>
+			<div class="col-9 col-md-6 col-xxl-3">
+				<p><label for="name">名前：</label>
+				<input type="text" class="form-control" th:field="*{name}">
+				<span class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+			</div>
+			<div class="col-9 col-md-6 col-xxl-3">
+				<p><label for="furigana">フリガナ：</label>
+				<input type="text" class="form-control" th:field="*{furigana}">
+				<span class="text-danger" th:if="${#fields.hasErrors('furigana')}" th:errors="*{furigana}"></span>
+			</div>
 			<p><input type="submit" class="btn btn-primary" value="ユーザー登録">
 		</div>
 	</form>

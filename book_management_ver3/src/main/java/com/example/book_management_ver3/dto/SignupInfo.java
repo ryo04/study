@@ -16,5 +16,14 @@ public class SignupInfo {
 
 	/** パスワード */
 	private String password;
+	
+	/** 性別 */
+	private String sex;
+	
+	/** 名前 */
+	private String name;
+	
+	/** フリガナ */
+	private String furigana;
 
 }

@@ -100,6 +100,7 @@ public class BookEditController {
 			RedirectAttributes redirectAttributes) {
 		var updateDto = mapper.map(form, BookUpdateInfo.class);
 		updateDto.setBookId((String) session.getAttribute(SessionKeyConst.SELECETED_BOOK_ID));
+//		updateDto.setUpdateUser(updateDto.getUpdateUser());
 		updateDto.setUpdateBookId(user.getUsername());
 
 		var updateResult = service.updateBookInfo(updateDto);

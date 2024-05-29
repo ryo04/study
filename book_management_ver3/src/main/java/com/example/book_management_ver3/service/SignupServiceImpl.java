@@ -66,12 +66,15 @@ public class SignupServiceImpl implements SignupService {
 		var userInfo = new UserInfo();
 		userInfo.setLoginId(dto.getLoginId());
 		userInfo.setPassword(passwordEncoder.encode(dto.getPassword()));
+		userInfo.setSex(dto.getSex());
 		userInfo.setUserStatusKind(UserStatusKind.ENABLED);
 		userInfo.setAuthorityKind(AuthorityKind.ITEM_WATCHER);
 		userInfo.setSignupCompleted(true); // 仮登録処理が必要になったら true から false に変える
 		userInfo.setCreateTime(LocalDateTime.now());
 		userInfo.setUpdateTime(LocalDateTime.now());
-		userInfo.setUpdateUser(dto.getLoginId());
+		userInfo.setUpdateUser(dto.getName());
+		userInfo.setName(dto.getName());
+		userInfo.setFurigana(dto.getFurigana());
 
 		return userInfo;
 	}

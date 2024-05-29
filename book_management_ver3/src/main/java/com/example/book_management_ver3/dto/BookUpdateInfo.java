@@ -19,6 +19,11 @@ public class BookUpdateInfo {
 	/** 貸出状態種別 */
 	private BookStatusKind bookStatusKind;
 
+//	/** 更新ユーザーID */
+//	private String updateUser;
+	
 	/** 更新ユーザーID */
 	private String updateBookId;
+	
+	
 }

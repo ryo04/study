@@ -35,18 +35,6 @@ public class UserInfo {
 	/** パスワード */
 	private String password;
 
-//	/** メールアドレス */
-//	@Column(name = "mail_address")
-//	private String mailAddress;
-
-//	/** ワンタイムコード */
-//	@Column(name = "one_time_code")
-//	private String oneTimeCode;
-//
-//	/** ワンタイムコード有効期限 */
-//	@Column(name = "one_time_code_send_time")
-//	private LocalDateTime oneTimeCodeSendTime;
-
 	/** ログイン失敗回数 */
 	@Column(name = "login_failure_count")
 	private int loginFailureCount = 0;
@@ -84,6 +72,14 @@ public class UserInfo {
 	/** 最終更新ユーザ */
 	@Column(name = "update_user")
 	private String updateUser;
+	
+	/** 最終更新ユーザ */
+	@Column(name = "name")
+	private String name;
+	
+	/** 最終更新ユーザ */
+	@Column(name = "furigana")
+	private String furigana;
 
 	/**
 	 * デフォルトコンストラクタ
@@ -97,8 +93,8 @@ public class UserInfo {
 	 * @return ログイン失敗回数がインクリメントされた、自身のインスタンス
 	 */
 	public UserInfo incrementLoginFailureCount() {
-		return new UserInfo(loginId, password, ++loginFailureCount,
-				accountLockedTime, userStatusKind, authorityKind, sex, signupCompleted, createTime, updateTime, updateUser);
+		return new UserInfo(loginId, password, ++loginFailureCount, accountLockedTime, userStatusKind,
+				authorityKind, sex, signupCompleted, createTime, updateTime, updateUser, name, furigana);
 	}
 
 	/**
@@ -108,7 +104,7 @@ public class UserInfo {
 	 */
 	public UserInfo resetLoginFailureInfo() {
 		return new UserInfo(loginId, password, 0, null, userStatusKind,
-				authorityKind, sex, signupCompleted, createTime, updateTime, updateUser);
+				authorityKind, sex, signupCompleted, createTime, updateTime, updateUser, name, furigana);
 	}
 
 	/**
@@ -117,8 +113,8 @@ public class UserInfo {
 	 * @return ログイン失敗回数、アカウントロック日時が更新された、自身のインスタンス
 	 */
 	public UserInfo updateAccountLocked() {
-		return new UserInfo(loginId, password, 0, LocalDateTime.now(),
-				userStatusKind, authorityKind, sex, signupCompleted, createTime, updateTime, updateUser);
+		return new UserInfo(loginId, password, 0, LocalDateTime.now(), userStatusKind, 
+				authorityKind, sex, signupCompleted, createTime, updateTime, updateUser, name, furigana);
 	}
 
 }

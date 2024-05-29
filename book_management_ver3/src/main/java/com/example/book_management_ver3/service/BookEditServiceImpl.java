@@ -54,6 +54,7 @@ public class BookEditServiceImpl implements BookEditService {
 
 		updateInfo.setUpdateTime(LocalDateTime.now());
 		updateInfo.setUpdateUser(bookUpdateInfo.getUpdateBookId());
+//		updateInfo.setUpdateUser(bookUpdateInfo.getUpdateUser());
 
 		try {
 			repository.save(updateInfo);
