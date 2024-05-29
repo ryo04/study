@@ -33,10 +33,6 @@ public class BookInfo {
 	/** 書籍名 */
 	@Column(name = "book_name")
 	private String bookName;
-	
-	/** 所有者 */
-	@Column(name = "holder")
-	private String holder;
 
 	/** 貸出状態種別 */
 	@Column(name = "lending_flg")
@@ -68,35 +64,5 @@ public class BookInfo {
 	 */
 	public BookInfo() {
 	}
-
-//	/**
-//	 * ログイン失敗回数をインクリメントします。
-//	 * 
-//	 * @return ログイン失敗回数がインクリメントされた、自身のインスタンス
-//	 */
-//	public BookInfo incrementLoginFailureCount() {
-//		return new BookInfo(bookId, bookName, holder, bookStatusKind, category, 
-//				rentedTime, createTime, updateTime, updateUser);
-//	}
-//
-//	/**
-//	 * ログイン失敗情報をリセットします。
-//	 * 
-//	 * @return ログイン失敗情報がリセットされた、自身のインスタンス
-//	 */
-//	public BookInfo resetLoginFailureInfo() {
-//		return new BookInfo(bookId, bookName, holder,bookStatusKind, category,
-//				rentedTime, createTime, updateTime, updateUser);
-//	}
-//
-//	/**
-//	 * ログイン失敗回数、アカウントロック日時を更新し、アカウントロック状態に更新します。
-//	 * 
-//	 * @return ログイン失敗回数、アカウントロック日時が更新された、自身のインスタンス
-//	 */
-//	public BookInfo updateAccountLocked() {
-//		return new BookInfo(bookId, bookName, holder, bookStatusKind, category,
-//				rentedTime, createTime, updateTime, updateUser);
-//	}
 
 }
