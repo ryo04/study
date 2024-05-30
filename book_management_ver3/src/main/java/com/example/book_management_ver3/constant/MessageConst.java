@@ -19,6 +19,17 @@ public class MessageConst {
 	
 	/** ユーザー登録画面：ユーザー登録完了 */
 	public static final String SIGNUP_TENTATIVE_SUCCEED = "signup.tentativeSucceed";
+	
+	/** ユーザー登録画面：性別の未入力 */
+	public static final String SIGNUP_SEX_EMPTY = "signup.sexEmpty";
+	
+	/** ユーザー登録画面：名前の未入力 */
+	public static final String SIGNUP_NAME_EMPTY = "signup.nameEmpty";
+	
+	/** ユーザー登録画面：フリガナの未入力 */
+	public static final String SIGNUP_FURIGANA_EMPTY = "signup.furiganaEmpty";
+	
+	
 
 	/** ユーザー登録情報確認画面：既に本登録済み */
 	public static final String SIGNUP_CONFIRM_ALREADY_COMPLETED = "signupConfirm.alreadyCompleted";
@@ -54,4 +65,5 @@ public class MessageConst {
 
 	/** 書籍情報編集画面：書籍更新完了 */
 	public static final String BOOKEDIT_UPDATE_SUCCEED = "bookEdit.updateSucceed";
+	
 }

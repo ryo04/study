@@ -48,6 +48,13 @@ public class SignupServiceImpl implements SignupService {
 
 		var signupInfo = editSignupInfo(dto);
 		try {
+			if(signupInfo.getSex() == null || signupInfo.getSex() == "") {
+				return SignupResult.SEX_MEPTY;
+			}else if(signupInfo.getName() == null || signupInfo.getName() == "") {
+				return SignupResult.NAME_MEPTY;
+			}else if(signupInfo.getFurigana() == null || signupInfo.getFurigana() == "") {
+				return SignupResult.FURIGANA_MEPTY;
+			}
 			repository.save(signupInfo);
 		} catch (Exception e) {
 			return SignupResult.FAILURE_BY_DB_ERROR;
