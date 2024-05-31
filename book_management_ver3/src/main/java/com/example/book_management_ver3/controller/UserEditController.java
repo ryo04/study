@@ -67,7 +67,7 @@ public class UserEditController {
 		if (userInfoOpt.isEmpty()) {
 			model.addAttribute(ModelKey.MESSAGE,
 					AppUtil.getMessage(messageSource, MessageConst.USEREDIT_NON_EXISTED_LOGIN_ID));
-			return ViewNameConst.USER_EDIT_ERROR;
+			return ViewNameConst.EDIT_ERROR;
 		}
 		var userInfo = userInfoOpt.get();
 		model.addAttribute("userEditForm", mapper.map(userInfo, UserEditForm.class));
@@ -86,7 +86,7 @@ public class UserEditController {
 	 */
 	@GetMapping(value = UrlConst.USER_EDIT, params = REDIRECT_PRAM_ERR)
 	public String viewWithError(Model model) {
-		return ViewNameConst.USER_EDIT_ERROR;
+		return ViewNameConst.EDIT_ERROR;
 	}
 
 	/**

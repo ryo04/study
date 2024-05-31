@@ -26,18 +26,13 @@ public class ViewNameConst {
 	/** ユーザー編集画面 */
 	public static final String USER_EDIT = "userEdit";
 
-	/** ユーザー編集画面_エラー時 */
-	public static final String USER_EDIT_ERROR = "userEditError";
-	
-	/** これより下は追加したもの */
+	/** 編集画面_エラー時 */
+	public static final String EDIT_ERROR = "editError";
 	
 	/** 書籍一覧画面 */
 	public static final String BOOK_LIST = "bookList";
 
 	/** 書籍編集画面 */
 	public static final String BOOK_EDIT = "bookEdit";
-
-	/** 書籍編集画面_エラー時 */
-	public static final String BOOK_EDIT_ERROR = "bookEditError";
 
 }

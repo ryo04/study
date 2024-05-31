@@ -25,6 +25,12 @@
 				<p><label for="sex">性別：</label>
 				<input type="text" class="form-control" th:field="*{sex}">
 				<span class="text-danger" th:if="${#fields.hasErrors('sex')}" th:errors="*{sex}"></span>
+
+<!--				<select class="form-select" th:field="*{sexKind}">-->
+<!--					<option value="">指定なし</option>					-->
+<!--					<option th:each="sexKindOption : ${sexKindOptions}"-->
+<!--						th:value="${sexKindOption}" th:text="${sexKindOption.sexKind}"></option>-->
+				</select>
 			</div>
 			<div class="col-9 col-md-6 col-xxl-3">
 				<p><label for="name">名前：</label>

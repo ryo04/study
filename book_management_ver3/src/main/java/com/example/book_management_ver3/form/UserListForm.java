@@ -19,7 +19,7 @@ public class UserListForm {
 	/** ログインID */
 	@Length(min = 8, max = 20)
 	private String loginId;
-
+	
 	/** アカウント状態種別 */
 	private UserStatusKind userStatusKind;
 

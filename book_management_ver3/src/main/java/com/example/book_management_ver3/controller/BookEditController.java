@@ -66,7 +66,7 @@ public class BookEditController {
 		if (bookInfoOpt.isEmpty()) {
 			model.addAttribute(ModelKey.MESSAGE,
 					AppUtil.getMessage(messageSource, MessageConst.BOOKEDIT_NON_EXISTED_LOGIN_ID));
-			return ViewNameConst.BOOK_EDIT_ERROR;
+			return ViewNameConst.EDIT_ERROR;
 		}
 		var bookInfo = bookInfoOpt.get();
 		model.addAttribute("bookEditForm", mapper.map(bookInfo, BookEditForm.class));
@@ -84,14 +84,14 @@ public class BookEditController {
 	 */
 	@GetMapping(value = UrlConst.BOOK_EDIT, params = REDIRECT_PRAM_ERR)
 	public String viewWithError(Model model) {
-		return ViewNameConst.BOOK_EDIT_ERROR;
+		return ViewNameConst.EDIT_ERROR;
 	}
 
 	/**
 	 * 画面の入力情報をもとに書籍情報を更新します。
 	 * 
 	 * @param form 入力情報
-	 * @param user 認証済み書籍情報
+	 * @param user 認証済みユーザー情報
 	 * @param redirectAttributes リダイレクト用オブジェクト
 	 * @return リダイレクトURL
 	 */

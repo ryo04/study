@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * ユーザー仮登録結果種別
+ * ユーザー登録結果種別
  * 
  * @author ys-fj
  */

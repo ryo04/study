@@ -28,8 +28,6 @@ public class MessageConst {
 	
 	/** ユーザー登録画面：フリガナの未入力 */
 	public static final String SIGNUP_FURIGANA_EMPTY = "signup.furiganaEmpty";
-	
-	
 
 	/** ユーザー登録情報確認画面：既に本登録済み */
 	public static final String SIGNUP_CONFIRM_ALREADY_COMPLETED = "signupConfirm.alreadyCompleted";
